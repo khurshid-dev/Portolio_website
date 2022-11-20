@@ -1,0 +1,445 @@
+/* Bysic Styles */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 27px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #797979;
+    letter-spacing: 0.2px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container.main {
+    display: flex;
+}
+
+.bysic-titles h2 {
+    max-width: 358px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 52px;
+    text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: #05364d;
+}
+
+li {
+    list-style-type: none;
+}
+
+.box-item h6:hover,
+.service-link:hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.gray-text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.gray-text span {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin-left: 5px;
+    width: 80px;
+    height: 4px;
+    filter: blur(4px);
+    border-radius: 5px;
+    background: rgba(237, 35, 159, .6);
+}
+
+
+
+
+
+/* Header Menu Section */
+.header-section {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: -70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    transform: translateY(70px);
+    transition: transform 500ms ease, background 500ms ease;
+    -webkit-transition: transform 500ms ease, background 500ms ease;
+    box-shadow: 0 3px 16px 0 rgb(0 0 0 / 10%);
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation {
+    text-align: center;
+    margin-left: 140px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.header-navigation__items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    list-style-type: none;
+    z-index: 2;
+}
+
+.header-navigation__item {
+    margin-right: 28px;
+}
+
+.header-navigation__item.active a {
+    color: #c31432;
+}
+
+.header-navigation__item a {
+    text-decoration: none;
+    font: 700 14px/100px "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #05364d;
+    padding: 0;
+    font-size: 0.86rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.header-navigation__item a:hover {
+    color: #c31432;
+    transform: scale(1.15);
+}
+
+
+
+/* Burger Menu List */
+.burger-menu-list {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.burger-menu-list ul {
+    padding-top: 80px;
+}
+
+.burger-menu-list ul li {
+    display: flex;
+    justify-content: center;
+    /* margin: 40px 0 11px; */
+    margin-bottom: 5px;
+}
+
+.burger-menu-list ul li a {
+    color: yellow;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 100%;
+}
+
+.burger-menu-list li a:hover {
+    color: rgb(0, 0, 0);
+    background: white;
+}
+
+.burger-menu-list.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+
+
+/* Burger Styles */
+.burger {
+    height: 20px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: none;
+    z-index: 2;
+}
+
+.burger-line {
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background: #070026;
+    transition: 0.3s all ease;
+}
+
+.top-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mid-line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bottom-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.burger.active::after {
+    background-color: rgb(255, 255, 255);
+    padding: 24px;
+    border-radius: 50%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    z-index: -1;
+}
+
+.burger.active>.top-line {
+    transform: translateY(8px) rotate(405deg);
+    transition: 1s all ease;
+    background: rgb(0, 0, 0);
+}
+
+.burger.active>.mid-line {
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.burger.active>.bottom-line {
+    transform: translateY(-10px) rotate(-405deg);
+    transition: 1s all ease;
+    background: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* Footer section */
+.footer-section {
+    padding: 80px 0 120px;
+    background-color: #021017;
+}
+
+.footer-body {
+    text-align: center;
+}
+
+.footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.footer-list li {
+    margin: 0 20px;
+}
+
+.footer-list a {
+    color: white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.footer-list a:hover {
+    color: #a702d3;
+}
+
+.footer-icons {
+    margin: 30px 0;
+}
+
+.footer-icon {
+    margin: 0px 8px;
+    display: inline-block;
+    padding: 7px 16px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+    transition: all ease-in 0.3s;
+}
+
+.footer-icon:hover {
+    color: white;
+    background: -webkit-linear-gradient(90deg, #c31432 40%, #240b36 100%);
+    background: -moz-linear-gradient(90deg, #c31432 40%, #240b36 100%);
+    background: -o-linear-gradient(90deg, #c31432 40%, #240b36 100%);
+    background: linear-gradient(90deg, #c31432 40%, #240b36 100%);
+}
+
+.footer-text span {
+    color: #a932c7;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Fonst Google 'Roboto' */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Fonts-api/Roboto-Black.eot');
+    src: url('../fonts/Fonts-api/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Fonts-api/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Fonts-api/Roboto-Black.woff') format('woff'),
+        url('../fonts/Fonts-api/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Fonts-api/Roboto-Bold.eot');
+    src: url('../fonts/Fonts-api/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Fonts-api/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Fonts-api/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Fonts-api/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Fonts-api/Roboto-Light.eot');
+    src: url('../fonts/Fonts-api/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Fonts-api/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/Fonts-api/Roboto-Light.woff') format('woff'),
+        url('../fonts/Fonts-api/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Fonts-api/Roboto-Medium.eot');
+    src: url('../fonts/Fonts-api/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Fonts-api/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Fonts-api/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Fonts-api/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Fonts-api/Roboto-Regular.eot');
+    src: url('../fonts/Fonts-api/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Fonts-api/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Fonts-api/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Fonts-api/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 991px) {
+    .burger-menu-list ul li a:hover {
+        color: #e5ff00;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 766px) {
+    .burger-menu-list ul li a
+}
+
+
+@media only screen and (max-width: 575px) {
+    .burger-menu-list ul li a
+} */
