@@ -24,26 +24,36 @@ burgerMenu();
 
 
 
-// Navbar section 
+// // Navbar section 
+// const navBar = document.querySelector('.header-navigation__items');
+// const navItems = document.querySelectorAll('.header-navigation__item a');
 
 
-// function navbarActive(i) {
-//     const navItem = document.querySelectorAll('.header-navigation__item');
-
-//     navItem[i].addEventListener('click', () => {
-//         navItem[i].classList.add('active');
-//         // navItem.classList.remove('active')
-//     })
-
-
-// //     navItem.forEach((item) => {
-// //         item.addEventListener('click', () {
-// //             item.classList.to
-// //         })
-// //     })
+// function navHide() {
+//     navItems.forEach((item) => {
+//         item.classList.remove('active');
+//     });
 // }
 
-// navbarActive();
+// function navShow(i = 0) {
+//     navItems[i].classList.add('active');
+// }
+
+// navHide();
+// navShow();
+
+
+// navBar.addEventListener('click', (event) => {
+//     const target = event.target;
+//     if(target && target.classList.contains('header-navigation__item item-content-link')) {
+//         navItems.forEach((itm, index) => {
+//             if(target === itm) {
+//                 navHide();
+//                 navShow(index);
+//             }
+//         });
+// }
+// });
 
 
 
@@ -52,45 +62,5 @@ burgerMenu();
 
 
 
-
-
-
-// testimonals slider 
-const btnsParent = document.querySelector('.indicator'),
-    btns = document.querySelectorAll('.btn'),
-    content = document.querySelectorAll('.client-comment-items');
-
-
-function hideContent() {
-    btns.forEach((item) => {
-    item.classList.remove('active');
-});
-content.forEach((item) => {
-    item.classList.add('hide');
-    item.classList.remove('show', 'fade');
-});
-}
-
-function showContent(i = 0) {
-    btns[i].classList.add('active');
-    content[i].classList.add('show', 'fade');
-    content[i].classList.remove('hide');
-}
-
-hideContent();
-showContent();
-
-
-btnsParent.addEventListener('click', (event) => {
-    const target = event.target;
-    if(target && target.classList.contains('btn')) {
-        btns.forEach((item, idx) => {
-            if(target === item) {
-                hideContent();
-                showContent(idx);
-            }
-        });
-}
-});
 
 

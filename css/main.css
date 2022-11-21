@@ -247,7 +247,7 @@
 
 .box-item:hover {
     border-radius: 20px;
-    transform: scale(1.1);
+    transform: scale(0.88);
     /* transition */
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
@@ -682,8 +682,12 @@
 .partner-logos img {
     margin-left: 40px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
+.partner-logos img:hover {
+    transform: translateY(-15px);
+}
 
 
 

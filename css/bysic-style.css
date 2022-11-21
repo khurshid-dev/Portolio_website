@@ -33,6 +33,7 @@ body {
 
 .bysic-titles h2 {
     max-width: 358px;
+    text-shadow: 1px 1px 5px #c31432;
 }
 
 h2 {
