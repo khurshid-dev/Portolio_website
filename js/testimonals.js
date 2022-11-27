@@ -33,5 +33,5 @@ btnsParent.addEventListener('click', (event) => {
                 showContent(idx);
             }
         });
-}
+    }
 });

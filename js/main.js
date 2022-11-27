@@ -26,34 +26,35 @@ burgerMenu();
 
 // // Navbar section 
 // const navBar = document.querySelector('.header-navigation__items');
-// const navItems = document.querySelectorAll('.header-navigation__item a');
+// const navItems = document.querySelectorAll('.header-navigation__item');
+// const navLink = document.querySelectorAll('#link');
 
 
 // function navHide() {
 //     navItems.forEach((item) => {
-//         item.classList.remove('active');
+//         item.classList.remove('activ');
 //     });
 // }
 
 // function navShow(i = 0) {
-//     navItems[i].classList.add('active');
+//     navItems[i].classList.add('activ');
 // }
-
 // navHide();
 // navShow();
 
-
-// navBar.addEventListener('click', (event) => {
-//     const target = event.target;
-//     if(target && target.classList.contains('header-navigation__item item-content-link')) {
-//         navItems.forEach((itm, index) => {
-//             if(target === itm) {
-//                 navHide();
-//                 navShow(index);
-//             }
-//         });
-// }
-// });
+// navItems.forEach((item) => {
+//     item.addEventListener('click', (event) => {
+//         const target = event.target;
+//         if(target && target.classList.contains('#link')) {
+//             navLink.forEach((item, index) => {
+//                 if(target === item) {
+//                     navHide();
+//                     navShow(index);
+//                 }
+//             });
+//     }
+//     });
+// })
 
 
 
