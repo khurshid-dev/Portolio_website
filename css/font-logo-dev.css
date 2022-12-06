@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/font-logo-dev/icomoon.eot');
+    src: url('../fonts/font-logo-dev/icomoon.eot') format('embedded-opentype'),
+        url('../fonts/font-logo-dev/icomoon.ttf') format('truetype'),
+        url('../fonts/font-logo-dev/icomoon.woff') format('woff'),
+        url('../fonts/font-logo-dev/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"]::before,
+[class*=" icon_"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_logo-github:before {
+    content: "\e900";
+}
+
+.icon_logo-tailwind:before {
+    content: "\e901";
+}
+
+.icon_logo-react:before {
+    content: "\e902";
+}
+
+.icon_logo-javascript:before {
+    content: "\e903";
+}
+
+.icon_logo-css:before {
+    content: "\e904";
+}
+
+.icon_logo-html:before {
+    content: "\e905";
+}

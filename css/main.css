@@ -45,18 +45,19 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
-    margin-left: 0;
-    margin: 0 auto;
+    margin: 7px 0;
 }
 
 .main-icons li {
-    margin-right: 20px;
-    padding: 48px 0;
+    margin: 34px 10px;
 }
 
 .main-icon_link {
     color: #797979;
-    font-size: 1.6rem;
+    font-size: 30px;
+    border: 1px solid #797979;
+    border-radius: 50%;
+    padding: 6px 6px 2px;
 }
 
 .main-icon_link:hover {
@@ -66,6 +67,7 @@
     background: linear-gradient(90deg, #c31432 0%, #240b36 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: 1px solid #c31432;
 }
 
 .main__button {
